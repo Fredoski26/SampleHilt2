@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ripplebg"
+    android:translationZ="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/rowUpdate"
+    android:padding="10dp"
+    android:layout_marginVertical="8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/id"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center_vertical"
+        android:text="First Name:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintRight_toLeftOf="@id/displayFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/displayFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#AC5353"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/first_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Last Name:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="@id/first_name"
+        app:layout_constraintStart_toStartOf="@id/first_name"
+        app:layout_constraintTop_toBottomOf="@id/first_name" />
+
+    <TextView
+        android:id="@+id/displayLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#AC5353"
+        app:layout_constraintRight_toRightOf="@id/displayFirstName"
+        app:layout_constraintStart_toStartOf="@id/displayFirstName"
+        app:layout_constraintTop_toBottomOf="@id/displayFirstName" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="@id/last_name"
+        app:layout_constraintStart_toStartOf="@id/last_name"
+        app:layout_constraintTop_toBottomOf="@id/last_name" />
+
+
+    <TextView
+        android:id="@+id/displayEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#AC5353"
+        app:layout_constraintTop_toBottomOf="@id/displayLastName"
+        app:layout_constraintStart_toStartOf="@id/displayLastName"
+        app:layout_constraintEnd_toEndOf="@+id/displayLastName"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

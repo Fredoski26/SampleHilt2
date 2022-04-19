@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_home"
+    app:startDestination="@id/viewListFragment">
+
+    <fragment
+        android:id="@+id/viewListFragment"
+        android:name="com.example.samplehilt2.fragments.ViewListFragment"
+        android:label="ViewAllUser"
+        tools:layout="@layout/fragment_view_list" >
+        <action
+            android:id="@+id/action_viewListFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_viewListFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.samplehilt2.fragments.AddFragment"
+        android:label="AddUser"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_viewListFragment"
+            app:destination="@id/viewListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.samplehilt2.fragments.UpdateFragment"
+        android:label="UpdateUser"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_viewListFragment"
+            app:destination="@id/viewListFragment" />
+    </fragment>
+</navigation>
